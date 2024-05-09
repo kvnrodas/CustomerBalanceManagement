@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head>
+        <!-- Page title -->
+        <title>List of Clients</title>
+        <!-- Character encoding -->
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <!-- Section for displaying client list -->
+        <section th:fragment="listadoClientes" id="clientes" class="bgClientes">
+            <div class="container">
+                <div class="row">
+                    <!-- Main section for client list -->
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-header">
+                                <!-- Title for client list -->
+                                <h4>[[#{persona.titulo-lista}]]</h4>
+                            </div>
+                            <!-- Check if there are clients to display -->
+                            <div th:if="${not #lists.isEmpty(personas)}">
+                                <!-- Table for displaying client details -->
+                                <table class="table table-striped">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <!-- Table headers -->
+                                            <th>#</th>
+                                            <th th:text="#{persona.nombre}">Name</th>
+                                            <th th:text="#{persona.saldo}">Balance</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Iterate through each client -->
+                                        <tr th:each="persona, contador : ${personas}">
+                                            <!-- Display client details -->
+                                            <td>[[${contador.count}]]</td>
+                                            <td>[[${persona.nombre} + ' ' + ${persona.apellido}]]</td>
+                                            <td>[[#{accion.idioma} + ' ' + ${#numbers.formatDecimal(persona.saldo,3,'COMMA',2,'POINT')}]]</td>
+                                            <td>
+                                                <!-- Edit client button -->
+                                                <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/editar/} + ${persona.idPersona}" class="btn-secondary text-decoration-none">
+                                                    <i class="bi bi-pencil-fill text-black" > [[#{accion.editar}]] </i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <!-- Delete client button -->
+                                                <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/eliminar(idPersona=${persona.idPersona})}" class="btn p-0">
+                                                    <i class="bi bi-trash-fill text-black" > [[#{accion.eliminar}]] </i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sidebar for displaying total balance and number of clients -->
+                    <div class="col-md-3">
+                        <!-- Card for displaying total balance -->
+                        <div class="card text-center text-white mb-3 customCardListado1">
+                            <div class="card-body">
+                                <!-- Title for total balance -->
+                                <h3 th:text="#{persona.saldoTotal}">Total Balance</h3>
+                                <!-- Display total balance -->
+                                <h4 class="display-4">
+                                    [[#{accion.idioma} + ' ' + ${#numbers.formatDecimal(saldoTotal,3,'COMMA',2,'POINT')}]]
+                                </h4>
+                            </div>
+                        </div>
+                        <!-- Card for displaying total number of clients -->
+                        <div class="card text-center text-white mb-3 customCardListado2">
+                            <div class="card-body">
+                                <!-- Title for total number of clients -->
+                                <h3 th:text="#{persona.totalClientes}">Total Clients</h3>
+                                <!-- Display total number of clients -->
+                                <h4 class="display-4">
+                                    <i class="bi bi-people"></i> [[${totalClientes}]]
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

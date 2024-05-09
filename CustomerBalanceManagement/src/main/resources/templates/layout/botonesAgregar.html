@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head>
+        <title>Botones Agregar</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <!-- Section for adding client buttons -->
+        <section th:fragment="botonesAgregar" class="py-4 mb4 agregarClienteCustom">
+            <div class="container">
+                <div class="row">
+                    <!-- Column for add client button -->
+                    <div class="col-md-3" sec:authorize="hasRole('ROLE_ADMIN')">
+                        <!-- Add client button trigger modal -->
+                        <a href="#" class="btn btn-primary customBtnAgregarCliente" data-bs-toggle="modal" data-bs-target="#agregarCliente">
+                            <!-- Icon for adding a new client -->
+                            <i class="bi bi-person-plus"></i>
+                            <!-- Text for adding a new client -->
+                            [[#{accion.agregar}]]
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

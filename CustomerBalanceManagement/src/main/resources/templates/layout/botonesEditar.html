@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.thymeleaf.org/extras/spring-security"> 
+    <head th:replace="~{layout/plantilla :: customHead}">
+        <!-- Custom head content replaced from the layout template -->
+        <title>Botones Editar</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <!-- Section for edit buttons -->
+        <section th:fragment="botonesEditar">
+            <!-- Actions section -->
+            <div id="actions" class="py-4 mb-4 bg-light">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <!-- Column for back button -->
+                        <div class="col-md-4 mb-3 mb-md-0 text-center text-md-start">
+                            <!-- Back button -->
+                            <a th:href="@{/}" class="btn btn-bg customEditBack">
+                                <!-- Icon for back -->
+                                <i class="bi bi-backspace-fill"></i>
+                                <!-- Text for back -->
+                                [[#{accion.regresar}]]
+                            </a>
+                        </div>
+                        <!-- Column for save button -->
+                        <div class="col-md-4 mb-3 mb-md-0 text-center">
+                            <!-- Save button -->
+                            <button type="submit" class="btn btn-bg customEditSave">
+                                <!-- Icon for save -->
+                                <i class="bi bi-floppy-fill"></i>
+                                <!-- Text for save -->
+                                [[#{accion.guardar}]]
+                            </button>
+                        </div>
+                        <!-- Column for delete button -->
+                        <div class="col-md-4 text-center text-md-end">
+                            <!-- Delete button -->
+                            <a th:href="@{/eliminar(idPersona=${persona.idPersona})}" class="btn btn-bg customEditDelete">
+                                <!-- Icon for delete -->
+                                <i class="bi bi-trash-fill text-black"></i>
+                                <!-- Text for delete -->
+                                [[#{accion.eliminar}]]
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,156 @@
+/* Login Styles */
+
+#password {
+    margin-left: 5px; /* Adjust the value as needed */
+}
+
+.custom-bg {
+    background: rgb(149, 135, 241);
+    background: radial-gradient(circle, rgba(149, 135, 241, 1) 0%, rgba(90, 135, 149, 1) 100%);
+}
+
+.customLoginFooter {
+    color: white;
+    background-color: #343a40;
+    padding: 15px 0;
+}
+
+#login {
+    min-height: calc(100vh - 70px);
+}
+
+.form {
+    margin: auto;
+    width: 400px;
+    padding: 50px;
+}
+
+.form h1 {
+    margin-bottom: 30px;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    padding-bottom: 15px;
+}
+
+.form .input-box input {
+    padding: 10px;
+    font-size: 16px;
+    color: #03a9f4;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+}
+
+.form .input-box label {
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: white;
+    transition: 0.5s;
+}
+
+.form input[type="submit"] {
+    background: #03a9f4;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.customCardLoginBody {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.card-header {
+    background: rgb(149, 135, 241);
+    background: radial-gradient(circle, rgba(149, 135, 241, 1) 0%, rgba(30, 36, 38, 0.23012955182072825) 0%);
+}
+
+.customBtnLogin,
+.customBtnSave,
+.customBtnAgregarCliente {
+    background: rgb(0, 142, 255);
+    border-radius: 17px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+/* General Styles */
+
+.custom-header,
+.custom-footer,
+.modal-header {
+    background: rgb(149, 135, 241);
+    background: radial-gradient(circle, rgba(149, 135, 241, 1) 0%, rgba(90, 135, 149, 1) 100%);
+}
+
+#main-header {
+    background: rgb(149, 135, 241);
+    background: radial-gradient(circle, rgba(149, 135, 241, 1) 0%, rgba(90, 135, 149, 1) 100%);
+}
+
+.bgClientes,
+.agregarClienteCustom {
+    background-color: #DBDDDD;
+}
+
+.customPlantillaFooter {
+    background-color: black;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    padding: 10px;
+}
+
+#clientes {
+    min-height: 75vh;
+}
+
+.customCardListado1 {
+    background: rgb(46, 168, 21);
+}
+
+.customCardListado2 {
+    background: rgb(207, 218, 116);
+}
+
+.customEditBack {
+    background: black;
+    border-radius: 17px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+.customEditSave {
+    background: rgb(40, 163, 14);
+    border-radius: 17px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+.customEditDelete {
+    background: rgb(255, 0, 0);
+    border-radius: 17px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 30px;
+    text-decoration: none;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:replace="~{layout/plantilla :: customHead}">
+        <!-- Custom head content replaced from the layout template -->
+        <title>Inicio</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+
+        <header th:replace="~{layout/plantilla :: header}"></header>
+
+        <!-- Section for adding buttons to add new items -->
+        <section th:replace="~{layout/botonesAgregar :: botonesAgregar}"></section>
+
+        <!-- Section for adding a new client -->
+        <section th:replace="~{layout/agregarCliente :: agregarCliente}"></section>
+
+        <!-- Section for listing existing clients -->
+        <section th:replace="~{layout/listadoClientes :: listadoClientes}"></section>
+
+        <footer th:replace="~{layout/plantilla :: footer}"></footer>
+
+    </body>
+</html>
