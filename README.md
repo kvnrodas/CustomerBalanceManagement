@@ -46,7 +46,7 @@ This project is licensed under the MIT License. For more details, see the [LICEN
 
 ## Contact
 
-If you have any questions or comments about this project, feel free to contact the development team.
+If you have any questions or comments about this project, feel free to contact me at kvnrodas@gmail.com.
 
 ---
 
