@@ -57,7 +57,7 @@ public class SecurityConfig {
      *
      * @param build The AuthenticationManagerBuilder to configure.
      * @throws Exception If an error occurs during configuration.
-     */
+     */    
     public void configurer(AuthenticationManagerBuilder build) throws Exception {
         build.userDetailsService(userDetailsService).passwordEncoder(
                 passwordEncoder());

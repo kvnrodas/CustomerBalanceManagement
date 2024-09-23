@@ -103,15 +103,7 @@
     background-color: #DBDDDD;
 }
 
-.customPlantillaFooter {
-    background-color: black;
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    bottom: 0px;
-    padding: 10px;
-}
+
 
 #clientes {
     min-height: 75vh;
@@ -153,4 +145,34 @@
     font-size: 18px;
     padding: 10px 30px;
     text-decoration: none;
+}
+
+
+
+.customPlantillaFooter {
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    position: relative; /* Change this to fixed if you want the footer to always stay at the bottom */
+    display: flex; /* Using flexbox for alignment */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.customPlantillaFooter p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px; /* Adjust the font size for better responsiveness */
+}
+
+.customPlantillaFooter a {
+    margin: 0 10px;
+    color: white; /* Ensures language links are visible on all screen sizes */
+    text-decoration: none;
+}
+
+.customPlantillaFooter a:hover {
+    color: #03a9f4; /* Optional hover effect */
 }

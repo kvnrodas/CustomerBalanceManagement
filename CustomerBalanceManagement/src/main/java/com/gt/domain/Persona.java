@@ -25,6 +25,7 @@ public class Persona implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Specifies the generation strategy for the primary key
+    @Column(name = "id_persona")
     private Long idPersona; // Unique identifier for the person
 
     @NotEmpty // Specifies that the name cannot be empty
