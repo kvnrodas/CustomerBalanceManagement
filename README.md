@@ -34,38 +34,6 @@ The application will automatically generate the necessary tables when it starts.
 Running Tests
 To run the test suite, use the following command:
 
-bash
-Copiar código
-mvn test
-Project Structure
-/html_templates: Contains HTML templates for different pages of the system.
-/css: Contains custom CSS files.
-/js: Contains custom JavaScript files.
-/resources: Contains property files for internationalization and validation messages.
-Key Features
-Creation, editing, and deletion of customers.
-Customer listing with detailed information.
-Internationalization for English and Spanish languages.
-Access control with user roles.
-API Endpoints
-Endpoint	HTTP Method	Description
-/customers	GET	List all customers
-/customers/{id}	GET	Get customer by ID
-/customers	POST	Create a new customer
-/customers/{id}	PUT	Update customer by ID
-/customers/{id}	DELETE	Delete customer by ID
-Known Issues
-Performance degradation with a large number of customers.
-Basic error handling.
-Contributing
-We welcome contributions! If you would like to contribute to this project, follow these steps:
-
-Fork this repository.
-Create a new branch for your feature (git checkout -b feature/new-feature).
-Make your changes and commit them (git commit -am 'Add a new feature').
-Push the branch (git push origin feature/new-feature).
-Create a new Pull Request.
-License
 This project is licensed under the MIT License. For more details, see the LICENSE file.
 
 Contact
